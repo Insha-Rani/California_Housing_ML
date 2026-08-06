@@ -1,5 +1,9 @@
-*.csv
-*.pkl
+__pycache__/
+*.pyc
 .ipynb_checkpoints/
-*/.ipynb_checkpoints/*
 .vscode/
+# Temporary test CSVs (Optional)
+input_del_mhv.csv
+input.csv
+output.csv
+main_old.py

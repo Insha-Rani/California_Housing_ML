@@ -28,7 +28,7 @@ def build_pipeline(num_attribs, cat_attribs):
 
 if not os.path.exists(MODEL_FILE):
     # TRAINING PHASE
-    print("Training shuru ho rahi hai, thoda waqt lag sakta hai...")
+    print("Training phase initiated please wait... ⏳")
     housing = pd.read_csv("housing.csv")
     
     housing['income_cat'] = pd.cut(housing["median_income"],
@@ -57,7 +57,7 @@ if not os.path.exists(MODEL_FILE):
         # Save model and pipeline
         joblib.dump(model, MODEL_FILE)
         joblib.dump(pipeline, PIPELINE_FILE)
-        print("Model successfully train aur save ho gaya hai! 🎉")
+        print("Model successfully trained and saved! 🎉")
 else:
 # INFERENCE PHASE
  model = joblib.load(MODEL_FILE)
